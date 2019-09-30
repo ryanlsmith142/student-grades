@@ -34,15 +34,15 @@ public class Student {
     }
 
 
-    public long getGradeAverage(ArrayList studentGrade) {
-        int studentRyan = ryan.getStudentGrades().size();
+    public long getGradeAverage(ArrayList studentGrades) {
+        int studentRyan = studentGrades.size();
         long total = 0;
         for (int i = 0; i <= studentRyan - 1; i++) {
-            total += (long) ryan.getStudentGrades().get(i);
+            total += (long) studentGrades.get(i);
         }
-        return total /= studentRyan;
+        return total / studentRyan;
     }
-        System.out.println(total);
+
 
 
     public static void main(String[] args) {
@@ -51,9 +51,13 @@ public class Student {
         ryan.addGrade(87);
         ryan.addGrade(84);
 
+        Student mitchell = new Student("Mitchell");
 
+        mitchell.addGrade(100);
+        mitchell.addGrade(75);
+        mitchell.addGrade(89);
 
-
+        System.out.println(mitchell.getGradeAverage(ryan.getStudentGrades()));
 
 
 //        System.out.println(total);
