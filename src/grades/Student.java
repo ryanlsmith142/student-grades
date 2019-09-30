@@ -46,18 +46,6 @@ public class Student {
 
 
     public static void main(String[] args) {
-        Student ryan = new Student("Ryan Smith");
-        ryan.addGrade(92);
-        ryan.addGrade(87);
-        ryan.addGrade(84);
-
-        Student mitchell = new Student("Mitchell");
-
-        mitchell.addGrade(100);
-        mitchell.addGrade(75);
-        mitchell.addGrade(89);
-
-        System.out.println(mitchell.getGradeAverage(ryan.getStudentGrades()));
 
 
 //        System.out.println(total);
