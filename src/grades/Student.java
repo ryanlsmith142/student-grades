@@ -8,7 +8,7 @@ public class Student {
 
     private String name;
 
-    private ArrayList<Double> studentGrades;
+    private ArrayList<Long> studentGrades;
 
     //STUDENT CONSTRUCTOR
 
@@ -17,7 +17,7 @@ public class Student {
         this.studentGrades =  new ArrayList<>();
     } //Student()
 
-    public void addGrade(double Grade){
+    public void addGrade(long Grade){
         studentGrades.add(Grade);
     }
 
@@ -29,22 +29,34 @@ public class Student {
         return this.name;
     }
 
-    public double[] studentGrades(){
+    public ArrayList getStudentGrades(){
         return this.studentGrades;
     }
 
 
+    public long getGradeAverage(ArrayList studentGrade) {
+        int studentRyan = ryan.getStudentGrades().size();
+        long total = 0;
+        for (int i = 0; i <= studentRyan - 1; i++) {
+            total += (long) ryan.getStudentGrades().get(i);
+        }
+        return total /= studentRyan;
+    }
+        System.out.println(total);
+
+
     public static void main(String[] args) {
         Student ryan = new Student("Ryan Smith");
-        ryan.addGrade(92.12);
-        ryan.addGrade(87.34);
-        ryan.addGrade(84.65);
+        ryan.addGrade(92);
+        ryan.addGrade(87);
+        ryan.addGrade(84);
 
-        for(Student student: ryan.){
 
-        }
 
-        System.out.println("ryan = " + ryan);
+
+
+
+//        System.out.println(total);
     }
 
 
